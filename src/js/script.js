@@ -6,6 +6,7 @@ const operationTableBody = document.querySelector(".operationTableBody");
 const tableRowTemplate = document.querySelector(".tableRowTemplate");
 const alertText = document.querySelector(".alertText");
 const historyModalArea = document.querySelector(".historyModalArea");
+const cursor = document.querySelector(".cursor");
 
 // ------------------------------------------------------- other assignments
 
@@ -192,4 +193,10 @@ historyModalArea.addEventListener("click", (e) => {
     historyModalArea.classList.remove("add");
     historyModalArea.children[0].classList.remove("addModal");
   }
+});
+
+// ------------------------------------------------------- cursor movement
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });
